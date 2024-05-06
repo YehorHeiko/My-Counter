@@ -3,22 +3,22 @@ import './Count.css'
 
 function Counter() {
 
-    const [state, setState] = useState(0)
+    const [count, setCount] = useState(0)
 
-    function plus () {
-        setState(state + 1)
+    function handlePlus () {
+        setCount(count + 1)
     }
-    function minus () {
-        setState(state - 1)
+    function handleMinus () {
+        setCount(count - 1)
     }
 
     return ( 
         <div className='block'>
             <h1 className='block__name'>COUNTER</h1>
-            <h1 className='block__count'>{state}</h1>
+            <h1 className='block__count'>{count}</h1>
             <div>
-            <button className='block__button' onClick={plus}>Plus +</button>
-            <button className='block__button' onClick={minus}>Minus -</button>
+            <button className='block__button' onClick={handlePlus}>Plus +</button>
+            <button className='block__button' onClick={handleMinus}>Minus -</button>
             </div>
         </div>
      );
